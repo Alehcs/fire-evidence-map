@@ -5,6 +5,7 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
 import { useGSAP } from '@gsap/react'
 import { fmt, type Dataset } from '../data'
 import GravityFlame from '../components/GravityFlame'
+import { BackdropFlame, PillarArt } from '../components/Art'
 import { COVER_LABEL, PHASE_LABEL, PRESETS, SCALE, VERDICT_LABEL, compare, expand, nearest, phaseOf, type Cover, type Phase } from '../lib/evidence'
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, useGSAP)
@@ -296,6 +297,7 @@ export default function Overview({ data }: { data: Dataset }) {
 
   return (
     <div ref={root}>
+      <BackdropFlame />
       <Guide />
       <section className="hero wrap" id="phase-top">
         <div className="hero-grid">
@@ -500,6 +502,7 @@ export default function Overview({ data }: { data: Dataset }) {
             const near = s.near[p.phase]
             return (
               <article key={p.key} className={`acc-item ${p.tone} ${i === 0 ? 'open' : ''}`} tabIndex={0}>
+                <PillarArt kind={p.key as 'prevention' | 'detection' | 'suppression'} />
                 <h3>{p.title}</h3>
                 <p className="tagline">{p.tagline}</p>
                 <div className="acc-body">

@@ -206,7 +206,7 @@ export default function EvidenceMap({ data, onOpen }: { data: Dataset; onOpen: (
                       />
                     )
                   })}
-                {PRESETS.filter((p) => p !== preset).map((p) => (
+                {PRESETS.filter((p) => p !== preset && !p.key.startsWith('e')).map((p) => (
                   <g key={p.key} className="preset-mark">
                     <path d={`M${sx(p.target.o2) - 5} ${sy(p.target.p)}h10M${sx(p.target.o2)} ${sy(p.target.p) - 5}v10`} />
                     <text x={sx(p.target.o2) + (p.target.o2 > 90 ? -8 : 8)} y={sy(p.target.p) - 7} textAnchor={p.target.o2 > 90 ? 'end' : 'start'}>

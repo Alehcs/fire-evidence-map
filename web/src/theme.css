@@ -242,12 +242,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 
 /* final call to action + footer */
 .action { text-align: center; padding: clamp(6rem, 14vw, 12rem) 0 clamp(4rem, 8vw, 7rem); position: relative; }
-.action::before {
-  /* an arc that rises from the section's bottom edge and never extends below it, so it adds no scroll height */
-  content: ''; position: absolute; left: 50%; bottom: 0; width: min(110rem, 170vw); height: min(52rem, 80vw); transform: translateX(-50%); z-index: -1; pointer-events: none;
-  background: radial-gradient(ellipse 50% 100% at 50% 100%, rgba(90, 169, 255, 0) 60%, rgba(90, 169, 255, 0.2) 76%, rgba(57, 135, 229, 0.06) 86%, transparent 96%);
-  filter: blur(20px);
-}
+/* the arc behind the final call to action is now the end state of the scroll-driven backdrop flame */
 .action h2 { font-size: clamp(2.4rem, 7.4vw, 6.6rem); line-height: 0.96; letter-spacing: -0.055em; font-weight: 600; text-wrap: balance; max-width: 16ch; margin-inline: auto; }
 .action p { color: var(--ink-2); margin: 1.4rem auto 2.2rem; max-width: 36rem; font-size: clamp(1rem, 1.2vw, 1.2rem); }
 .action .btn-row { justify-content: center; }
@@ -446,3 +441,39 @@ figcaption { display: grid; gap: 2px; font-size: 13.5px; }
 .score-key .b1 { background: var(--ink); } .score-key .b2 { background: var(--ink-2); } .score-key .b3 { background: var(--muted); }
 
 .inv-card .sum { color: var(--ink-2); font-size: 13.5px; line-height: 1.4; }
+
+/* scroll-driven backdrop: --g is 1 at the top of the page (Earth gravity) and 0 at the bottom (freefall).
+   Only opacity and transform change, so the browser never repaints the blurred shapes. */
+.backdrop { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; --g: 1; }
+.backdrop i { position: absolute; left: 50%; display: block; will-change: transform, opacity; }
+.bd-tear {
+  bottom: -8vh; width: min(44vh, 62vw); height: 96vh; transform-origin: 50% 100%;
+  transform: translateX(-50%) scale(calc(0.7 + 0.3 * var(--g)), calc(0.34 + 0.66 * var(--g)));
+  opacity: calc(var(--g) * var(--g) * 0.55);
+  border-radius: 50% 50% 50% 50% / 80% 80% 20% 20%;
+  background: radial-gradient(ellipse 50% 52% at 50% 74%, rgba(255, 240, 200, 0.95) 0, rgba(255, 176, 74, 0.8) 26%, rgba(255, 106, 31, 0.42) 52%, rgba(255, 106, 31, 0) 74%);
+  filter: blur(30px);
+}
+.bd-sphere {
+  top: 100%; width: min(110rem, 170vw); aspect-ratio: 1; border-radius: 50%; transform-origin: 50% 50%;
+  transform: translate(-50%, -50%) scale(calc(0.22 + 0.78 * (1 - var(--g))));
+  opacity: calc((1 - var(--g)) * 0.95);
+  background: radial-gradient(circle, rgba(90, 169, 255, 0) 30%, rgba(90, 169, 255, 0.2) 38%, rgba(57, 135, 229, 0.06) 43%, transparent 48%);
+  filter: blur(20px);
+}
+/* pillar illustrations */
+.acc-art { position: absolute; z-index: 1; left: 0; right: 0; top: 6%; width: 100%; height: 46%; opacity: 0.92; transition: transform 0.7s ease-out, opacity 0.5s; pointer-events: none; }
+.acc-item:hover .acc-art { transform: scale(1.05); opacity: 1; }
+.pa-flame { animation: pa-move 7s ease-in-out infinite alternate; }
+@keyframes pa-move { from { transform: translateX(-28px); } to { transform: translateX(44px); } }
+.da-p { fill: #b6bfce; opacity: 0; animation: da-drift 4s linear infinite; }
+@keyframes da-drift { 0% { transform: translateX(-26px); opacity: 0; } 25% { opacity: 0.75; } 80% { opacity: 0.5; } 100% { transform: translateX(64px); opacity: 0; } }
+.da-s circle { fill: none; stroke: rgba(182, 191, 206, 0.5); stroke-width: 1.5; }
+.da-s .da-dot { fill: var(--critical); stroke: none; animation: da-blink 1.6s ease-in-out infinite; }
+@keyframes da-blink { 0%, 100% { opacity: 0.25; } 50% { opacity: 1; } }
+.sa-jets path { fill: none; stroke: rgba(182, 205, 240, 0.6); stroke-width: 2; stroke-linecap: round; stroke-dasharray: 6 12; animation: sa-flow 1.4s linear infinite; }
+@keyframes sa-flow { to { stroke-dashoffset: -36; } }
+.sa-flame { transform-origin: 262px 110px; animation: sa-shrink 5s ease-in-out infinite; }
+@keyframes sa-shrink { 0%, 100% { transform: scale(1); opacity: 1; } 55% { transform: scale(0.62); opacity: 0.55; } }
+@media (max-width: 860px) { .acc-art { position: relative; top: 0; height: 150px; margin-bottom: 4px; } }
+@media (prefers-reduced-motion: reduce) { .pa-flame, .da-p, .da-s .da-dot, .sa-jets path, .sa-flame { animation: none; } .da-p { opacity: 0.6; } }
