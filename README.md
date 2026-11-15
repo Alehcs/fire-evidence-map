@@ -139,5 +139,3 @@ Python needs `numpy`, `scikit-learn` and `opencv-python`. The optional video ste
 <p align="center">
   <img src="docs/investigations.jpg" alt="Investigations view: 24 NASA investigations with plain-language summaries" width="100%">
 </p>
-
-<p align="center"><sub>Not affiliated with or endorsed by NASA.</sub></p>
