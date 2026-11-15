@@ -1,0 +1,221 @@
+{
+ "note": "Summaries drafted by a language model from PSI record text. Quotes are kept only if found verbatim in the record.",
+ "summaries": {
+  "PSI-10": {
+   "summary": "Burned gas flames on a spherical burner to find when soot starts to form, across flow, dilution and pressure.",
+   "relevance": "Background science: soot limits feed combustion models. Not a material test.",
+   "quotes": [
+    "Obtain soot-inception limits of quasi-steady normal and inverse spherical diffusion flames"
+   ],
+   "model": "Claude (Anthropic)",
+   "verified_quote": true
+  },
+  "PSI-20": {
+   "summary": "Used a flat gas burner to imitate burning solids and liquids in still air, at atmospheres NASA considers for crewed missions.",
+   "relevance": "Shows a material can keep burning with no air flow, so stopping ventilation is not enough.",
+   "quotes": [
+    "observed in microgravity despite the absence of air flow"
+   ],
+   "model": "Claude (Anthropic)",
+   "verified_quote": true
+  },
+  "PSI-21": {
+   "summary": "Studied weak and sooty gas flames in a stream of air to test computer models at the extremes of fuel dilution.",
+   "relevance": "Background science: better flame and soot models.",
+   "quotes": [
+    "Characterize the behavior of weak coflow diffusion flames of methane and ethylene"
+   ],
+   "model": "Claude (Anthropic)",
+   "verified_quote": true
+  },
+  "PSI-22": {
+   "summary": "Applied electric fields to small gas flames to see how the field changes their shape, soot and stability.",
+   "relevance": "Background science. The challenge notes the electric field was used to mimic partial gravity.",
+   "quotes": [
+    "investigates how electric fields influence the behavior of laminar diffusion flames in microgravity"
+   ],
+   "model": "Claude (Anthropic)",
+   "verified_quote": true
+  },
+  "PSI-23": {
+   "summary": "Created spherical gas flames around a porous burner to test models of flame structure and extinction.",
+   "relevance": "Background science: how simple flames behave near their limits.",
+   "quotes": [
+    "a spherical, one-dimensional stabilized flame"
+   ],
+   "model": "Claude (Anthropic)",
+   "verified_quote": true
+  },
+  "PSI-25": {
+   "summary": "Burned plastic sheets, rods and fabric in a small wind tunnel on the ISS, varying air speed and oxygen.",
+   "relevance": "Direct evidence on how cabin materials ignite, spread flame and go out in microgravity.",
+   "quotes": [
+    "Study the ignition, flame growth, flame spread, and extinction limits for solid fuels burning in low-velocity forced flows in microgravity"
+   ],
+   "model": "Claude (Anthropic)",
+   "verified_quote": true
+  },
+  "PSI-26": {
+   "summary": "Burned fabric, plastic spheres and candles on the ISS, then tried to put the flames out with an inert gas.",
+   "relevance": "Tests whether the Earth screening test for materials holds in space, and how to extinguish.",
+   "quotes": [
+    "actual material flammability in microgravity"
+   ],
+   "model": "Claude (Anthropic)",
+   "verified_quote": true
+  },
+  "PSI-39": {
+   "summary": "Burned droplets of dodecane fuel at pressures from 0.25 to 5 atm to study cool flames.",
+   "relevance": "Background science on cool flames, which keep reacting without a visible flame.",
+   "quotes": [
+    "Analyze the effects of helium dilution on cool flame behavior"
+   ],
+   "model": "Claude (Anthropic)",
+   "verified_quote": true
+  },
+  "PSI-47": {
+   "summary": "Checked that a modified particle counter works in microgravity before using it to measure smoke.",
+   "relevance": "Supports reliable smoke detection on long missions.",
+   "quotes": [
+    "Demonstrate the Functionality of the Modified TSI P-Trak in Microgravity"
+   ],
+   "model": "Claude (Anthropic)",
+   "verified_quote": true
+  },
+  "PSI-60": {
+   "summary": "Reanalyzed more than 1,600 SPICE flame photos to map soot temperature and amount.",
+   "relevance": "Background science on soot in microgravity flames.",
+   "quotes": [
+    "By analyzing over 1600 raw DSLR images"
+   ],
+   "model": "Claude (Anthropic)",
+   "verified_quote": true
+  },
+  "PSI-62": {
+   "summary": "Built computer models of flames spreading along solids in microgravity, checked against BASS geometries.",
+   "relevance": "Aims at tools to screen the flammability of new materials.",
+   "quotes": [
+    "predictive tools for screening new materials"
+   ],
+   "model": "Claude (Anthropic)",
+   "verified_quote": true
+  },
+  "PSI-68": {
+   "summary": "Burned droplets of several fuels and mixtures at 0.5 to 3 atm and different oxygen levels.",
+   "relevance": "Extends FLEX to more fuels. Benchmark data for combustion models.",
+   "quotes": [
+    "varied in pressure between 0.5 atm to 3.0 atm"
+   ],
+   "model": "Claude (Anthropic)",
+   "verified_quote": true
+  },
+  "PSI-69": {
+   "summary": "Burned large fuel droplets while adding gases such as CO2 or helium, to find when the flame goes out.",
+   "relevance": "Measures how well gas suppressants work in microgravity.",
+   "quotes": [
+    "measure the effectiveness of various gaseous fire suppressants such as CO2, He, and SF6"
+   ],
+   "model": "Claude (Anthropic)",
+   "verified_quote": true
+  },
+  "PSI-98": {
+   "summary": "Lit a large sheet of cotton-fiberglass fabric inside an uncrewed cargo ship after it left the ISS.",
+   "relevance": "A first look at how fast a large fire grows in low gravity.",
+   "quotes": [
+    "determine how rapidly a large scale fire grows in low-gravity"
+   ],
+   "model": "Claude (Anthropic)",
+   "verified_quote": true
+  },
+  "PSI-99": {
+   "summary": "Burned nine smaller samples, including silicone, fabric and plastic, inside an uncrewed cargo ship.",
+   "relevance": "Compares flammability limits in low gravity with NASA's ground screening test.",
+   "quotes": [
+    "investigate the low-g flammability limits compared to those obtained in"
+   ],
+   "model": "Claude (Anthropic)",
+   "verified_quote": true
+  },
+  "PSI-100": {
+   "summary": "Repeated the large fabric burn of Saffire-I with faster air: 30 cm/s instead of 20.",
+   "relevance": "Shows how air speed changes the growth of a large fire.",
+   "quotes": [
+    "the experiments were conducted at a flow velocity of 30 cm/s compared to 20 cm/s during Saffire I"
+   ],
+   "model": "Claude (Anthropic)",
+   "verified_quote": true
+  },
+  "PSI-101": {
+   "summary": "Overheated spacecraft materials and measured the smoke particles, with new instruments and a new foam sample.",
+   "relevance": "Data to design smoke detectors that work in microgravity.",
+   "quotes": [
+    "quantify the sizes that the liquid smoke particulate achieves in low gravity"
+   ],
+   "model": "Claude (Anthropic)",
+   "verified_quote": true
+  },
+  "PSI-102": {
+   "summary": "Overheated spacecraft materials on the ISS and measured the size of the smoke particles.",
+   "relevance": "Smoke differs in microgravity, so detectors must be tuned for it.",
+   "quotes": [
+    "quantify the sizes that the liquid smoke particulate achieves in low gravity"
+   ],
+   "model": "Claude (Anthropic)",
+   "verified_quote": true
+  },
+  "PSI-106": {
+   "summary": "Studied small gas flames that lift off the burner, to learn what keeps a flame anchored.",
+   "relevance": "Background science on flame stability.",
+   "quotes": [
+    "better understand the structure and stability of laminar diffusion flames in microgravity"
+   ],
+   "model": "Claude (Anthropic)",
+   "verified_quote": true
+  },
+  "PSI-107": {
+   "summary": "Burned gas jets in a stream of air to find the point where a flame starts to smoke.",
+   "relevance": "Background science on soot and smoke production.",
+   "quotes": [
+    "Identify the laminar smoke-point properties of non-buoyant jet diffusion flames"
+   ],
+   "model": "Claude (Anthropic)",
+   "verified_quote": true
+  },
+  "PSI-115": {
+   "summary": "Simulated how smoke particles grow in microgravity and in Earth gravity, using the SAME setup.",
+   "relevance": "Explains why smoke differs in space, which matters for detectors.",
+   "quotes": [
+    "quantify the differences between microgravity and Earth gravity smoke"
+   ],
+   "model": "Claude (Anthropic)",
+   "verified_quote": true
+  },
+  "PSI-117": {
+   "summary": "Simulated droplet cool flames from FLEX to see how heating and drift change their fate.",
+   "relevance": "Could improve fire-safety models of cool flames.",
+   "quotes": [
+    "Potential to improve spacecraft fire-safety modeling"
+   ],
+   "model": "Claude (Anthropic)",
+   "verified_quote": true
+  },
+  "PSI-142": {
+   "summary": "Used FLEX data, simulations and lab flames to map the limits of cool flames.",
+   "relevance": "Links the extinction limits of hot flames and cool flames.",
+   "quotes": [
+    "Bridge the knowledge gap between the flammability limits and extinction limits of hot flames and cool flames"
+   ],
+   "model": "Claude (Anthropic)",
+   "verified_quote": true
+  },
+  "PSI-159": {
+   "summary": "Burned light hydrocarbon gases on a spherical burner to find when cool flames appear.",
+   "relevance": "Holds the highest-oxygen tests in the archive, up to 85%.",
+   "quotes": [
+    "Determine the conditions for which cool diffusion flames occur"
+   ],
+   "model": "Claude (Anthropic)",
+   "verified_quote": true
+  }
+ }
+}
